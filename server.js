@@ -104,12 +104,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articles',function (req, res) {
+app.get('/;articles',function (req, res) {
 // articlename == article-one
-// articles[articlename] == {} content object for articleone
+// articles[articlename] == () content object for article-one
 var articlename == req.params.articlename:  
-
-   res.send(createTemplate(articles[articlename]));
+res.send(createTemplate(articles[articlename]));
 
 });
 

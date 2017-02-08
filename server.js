@@ -34,7 +34,7 @@ function createTemplate (data)  {
     var content = data.content;
     
     
-    var htmltemplate =  ` 
+    var htmlTemplate =  ` 
     <html>
     <head>
     <title>

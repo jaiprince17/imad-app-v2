@@ -25,6 +25,49 @@ var content= {
     
     
 };
+var htmtemplate = ` 
+
+<html>
+    <head>
+        <title>
+            Article one [ Jaiprince17 ]
+        </title>
+        <meta name="viewport" content="width=device-width, initi-scale=1">
+        <link href="/ui/style.css" rel="stylesheet" />
+        
+    </head>
+    <body>
+    <div class="container">
+        
+    <div>
+        <a href="/">Home</a>
+    </div>
+    
+    <hr/>
+    <h3>
+        Article one
+    </h3>
+    <div>
+        FEB 8,2017
+    </div>
+    <p>
+    tHIS Is the content of the Article one
+    tHIS Is the content of the Article one
+    tHIS Is the content of the Article one
+    </p>
+    <p>
+    tHIS Is the content of the Article one
+    tHIS Is the content of the Article one
+    tHIS Is the content of the Article one
+    </p> 
+</div>
+</body>
+</html>
+     `;
+}
+
+
+
 
 
 app.get('/', function (req, res) {

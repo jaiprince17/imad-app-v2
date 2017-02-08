@@ -10,11 +10,19 @@ var content= {
     title:'Article-one [jaiprince17]',
     heading: 'Article-one',
     date: 'feb 8, 2017',
-    content:' <p>
+    content:`
+    <p>
     tHIS Is the content of the Article one
     tHIS Is the content of the Article one
     tHIS Is the content of the Article one
-    </p> ',
+    </p>
+    <p>
+    tHIS Is the content of the Article one
+    tHIS Is the content of the Article one
+    tHIS Is the content of the Article one
+    </p> `
+    
+    
     
 };
 

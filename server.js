@@ -23,7 +23,6 @@ var articles = {
     tHIS Is the content of the Article one
     </p2> `
      },
-     
     'article-two': { 
     title:'Article two [jaiprince17]',
     heading: 'article two',
@@ -105,6 +104,7 @@ app.get('/', function (req, res) {
 app.get('/:articleName',function (req, res) {
 // articleName == aticle-one
 // articles[articles[articleName] == {} content object for article one
+var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 
 });

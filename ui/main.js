@@ -17,14 +17,14 @@ button.onclick =  function () {
 
         }
     }
+    // not done yet
 };
-// not done yet
-};
+
 
 // make the request
 request.open('GET','http://jaiprince17.imad.hasura-app.io/counter',true);
 request.send(null);
 
-
+};
 
 

@@ -9,9 +9,9 @@ app.use(morgan('combined'));
 var articles = { 
     articleone: {
     title:'Article one [jaiprince17]',
-    heading: 'article one',
+    heading: 'Article one',
     date: 'feb 8, 2017',
-    content:`
+    content: `
     <p>
     tHIS Is the content of the Article one
     tHIS Is the content of the Article one
@@ -55,7 +55,7 @@ var articles = {
     tHIS Is the content of the Article three
     tHIS Is the content of the Article three
     </p2> `
-     },
+     }
     
 };
    
@@ -104,11 +104,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/;articles',function (req, res) {
-// articlename = article-one
-// articles[articlename] = () content object for article one
+app.get('/:articleName',function (req, res) {
+// articlename == article-one
+// articles[articleName] == {} content object for article one
 var articlename = req.params.articlename;  
-res.send(createTemplate(articles[articlename]));
+res.send(createTemplate(articles[articleName]));
 
 });
 

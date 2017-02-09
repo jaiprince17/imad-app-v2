@@ -9,11 +9,11 @@ element.innerHTML ='cool tool you gotta be a fool';
 var img = document.getElementById('madi');
 var marginLeft = 0;
 function moveRight () {
-    marginLeft = marginLeft + 5;
+    marginLeft = marginLeft + 10;
     img.style.marginLeft = MarginLeft + 'px' ;
 }
 img.onclick = function () {
-    var interval = setInterval(moveRight, 50);
+    var interval = setInterval(moveRight, 100);
     
 };
     

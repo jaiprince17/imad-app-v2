@@ -8,7 +8,7 @@ element.innerHTML ='cool tool you gotta be a fool';
 // move the image
 var img = document.getElementById('madi');
 img.onclick = function () {
-    madi.style.marginleft = '100px';
+    img.style.marginleft = '100px';
     
 };
     

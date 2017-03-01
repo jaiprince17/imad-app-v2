@@ -71,6 +71,7 @@ app.get('/hash/:input', function(req, res) {
 
 app.get('/create-user',function (req, res) {
     // username, password
+    // {"username": "Jaiprince17", "password": "password"}
     // JSON
     var username = req.params.usernmae;
     var password = req.params.password;

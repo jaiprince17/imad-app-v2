@@ -73,10 +73,8 @@ app.get('/create-user',function (req, res) {
     // username, password
     // {"username": "Jaiprince17", "password": "password"}
     // JSON
-    var username = req.params.usernmae;
-    var password = req.params.password;
-    
-    
+    var username = req.body.usernmae;
+    var password = req.body.password;
     var salt = crypto.randomBytes(128).toString('hex');
     var dbstring = hash(password,salt);
     pool.query('INSET INTO "user" (username, password) VALUES ($1, $2)', [username, dbString], function(err, result) {
@@ -86,6 +84,32 @@ app.get('/create-user',function (req, res) {
             res.send('User Sucessfully Created:' + username);
         }
     });
+});
+
+app.post('/login', function (req, res) {
+    var username = req.params.usernmae;
+    var password = req.params.password;
+    
+    pool.query('SELECT * from "user" username = $1', [username], function(err, result) {
+         if (err) {
+            res.status(500).send(err.toString());
+        } else {
+            if (result,rows,lenght === 0) {
+                res.send(403),send('username/password is invalid');
+            } else {
+                //match the password
+                var dbString = result.rows[0],password;
+                var salt = dbString.split('$')[2];
+                var hashesPassword = hash(password, salt); // creating a hash based on the password submitted and the orginal salt
+                if (hashedpassword === dbstring) {
+                    res.send('credentials correct!');
+                } else {
+                    res.send(403).send('username/password is invalid');
+                }
+                
+            }
+}
+});
 });
 
 

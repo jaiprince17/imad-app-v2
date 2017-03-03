@@ -73,7 +73,7 @@ app.get('/create-user',function (req, res) {
     // username, password
     // {"username": "Jaiprince17", "password": "password"}
     // JSON
-    var username = req.body.usernmae;
+    var username = req.body.username;
     var password = req.body.password;
     var salt = crypto.randomBytes(128).toString('hex');
     var dbstring = hash(password,salt);

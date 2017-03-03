@@ -6,7 +6,7 @@ submit.onclick = function () {
     var request = new XMLHttpRequest();
     
     // capture the response and store it in a variable
-    request.onreadystatechange = function () {
+    request.onreadyStatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
         // take some action
         if (request.status === 200) {
@@ -23,7 +23,7 @@ submit.onclick = function () {
     // not done yet
 };
 // make the request
-var username = document.getElementById('usernmae').value;
+var username = document.getElementById('username').value;
 var password = document.getElementById('password').value;
 console.log(username);
 console.log(password);

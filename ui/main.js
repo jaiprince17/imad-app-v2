@@ -11,7 +11,6 @@ submit.onclick = function () {
         // take some action
         if (request.status === 200) {
              // capture a list of names and render it as a list
-            console.log('user logged in');
             alert('logged in successfully');
         }else if (request.status === 403) {
             alert('username/password is incorrect');

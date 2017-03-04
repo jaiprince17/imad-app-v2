@@ -92,7 +92,15 @@ app.post('/create-user', function(req, res) {
 
 
 app.post('/login', function (req, res) {
-    
+    var username = req.body.username;
+    var password = req.body.password;
+    pool.query('INSERT INTO "user" (username, password) Values ($1, $2)', [username, dbString], function (err, result){
+    if (err) {
+            res.status(500).send(err.toString());
+        } else {
+            res.send('User Successfully created: ' + username);
+        } 
+});
 });
 
 

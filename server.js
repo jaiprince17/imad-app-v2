@@ -98,8 +98,20 @@ app.post('/login', function (req, res) {
     if (err) {
             res.status(500).send(err.toString());
         } else {
-            res.send('User Successfully created: ' + username);
+            if (result.rows.length === 0){
+                res.send(403).send('username/password is invalid');
+                } else {
+                    // Match the password
+                    var dbString = result.rows[0].password;
+                    var salt = dbString.split('$')[2];
+                    var hashedPassword = hash(password, salt); // creating a hash based on the password submittes and the original salt 
+                    if (hashedPassword === dbString) {
+                res.send(' credentials correct !');
+                    } else {
+                        res.send(403).send('username/password is invalid');
+                    }
         } 
+        }
 });
 });
 

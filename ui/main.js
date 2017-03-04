@@ -10,8 +10,7 @@ submit.onclick = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
         // take some action
         if (request.status === 200) {
-             // capture a list of names and render it as a list
-            alert('logged in successfully');
+          alert('logged in successfully');
         }else if (request.status === 403) {
             alert('username/password is incorrect');
         }else if (request.status === 500) {

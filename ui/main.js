@@ -27,7 +27,7 @@ console.log(username);
 console.log(password);
 request.open('POST','http://jaiprince17.imad.hasura-app.io/login', true);
 request.setRequestHeader('Content-Type', 'application/json');
-request.send(JSON.stringify({username:username, password:password}));
+request.send(JSON.Stringify({username:username, password:password}));
     
 };
     

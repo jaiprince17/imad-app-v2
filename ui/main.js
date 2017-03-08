@@ -10,7 +10,7 @@ submit.onclick=function(){
                 console.log('user logged in');
                 alert('Logged in succesfully');
             } else if(request.status===403){
-                    alert('Username/ Password is incorrect');   
+                    alert('username/ Password is incorrect');   
             } else if(request.status===500){
                 alert('Something went wrong on the server');
             }

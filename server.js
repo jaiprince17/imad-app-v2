@@ -66,7 +66,7 @@ app.get('/', function (req, res) {
 function hash(input, salt) {
     // yep how we gonna create a hash
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
-    return ["pbkdf2", "10000", salt, hashed.toString('hex')].join('$');
+    return ["pbkdf2Sync", "10000", salt, hashed.toString('hex')].join('$');
 }
 
 
@@ -101,7 +101,7 @@ app.post('/login', function(req, res) {
             res.status(500).send(err.toString());
         } else {
             if (result.rows.length === 0){
-                res.send(403).send('username/password is invalid');
+                res.status(403).send('username/password is invalid');
                 } else {
                     // Match the password
                     var dbString = result.rows[0].password;

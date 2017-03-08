@@ -10,7 +10,7 @@ submit.onclick = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
         // take some action
         if (request.status === 200) {
-          alert("logged in successfully");
+          alert('logged in successfully');
         }else if (request.status === 403) {
             alert('username/password is incorrect');
         }else if (request.status === 500) {
@@ -27,7 +27,7 @@ console.log(username);
 console.log(password);
 request.open('POST','http://jaiprince17.imad.hasura-app.io/login', true);
 request.setRequestHeader('Content-Type', 'application/json');
-request.send(JSON.stringify({username: username, password: password}));
+request.send(JSON.stringify({username:username, password:password}));
     
 };
     
